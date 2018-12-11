@@ -56,16 +56,17 @@ public class Login extends JFrame{
         jbt.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                Game fr = new Game();
+                Game fr = new Game(Login.this);
                 fr.setVisible(true);
-                Login.this.dispose();
+                Login.this.setVisible(false);
             }
         });
         jbt2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                DoubleGames dg = new DoubleGames();
+                DoubleGames dg = new DoubleGames(Login.this);
                 dg.setVisible(true);
+                Login.this.setVisible(false);
             }
         });
 
